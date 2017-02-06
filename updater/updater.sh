@@ -1,5 +1,15 @@
 #!/bin/bash
 
+echo ""
+echo "BEGIN REPO PULL smoothflow-website"
 cd ../
-git clone https://github.com/DuoSoftware/smoothflow-website.git
-mv smoothflow-website/* /var/www/html/
+
+if [ ! -d "smoothflow-website" ]; then
+	git clone https://github.com/DuoSoftware/smoothflow-website.git
+else
+	cd smoothflow-website
+	git pull
+    cd ../
+fi
+
+yes | cp -R smoothflow-website/* /var/www/html/
