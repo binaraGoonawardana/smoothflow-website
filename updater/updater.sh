@@ -13,3 +13,6 @@ else
 fi
 
 yes | cp -R smoothflow-website/* /var/www/html/
+
+echo ""
+echo "Completed the smoothflow-website repo pul"
