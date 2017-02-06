@@ -1,0 +1,275 @@
+<div id="wrapper">
+
+    <div class="innertitle" data-sr="enter bottom and move 50px over 0.5s">
+        <div class="row">
+            <h1>Blog</h1>
+        </div>
+    </div>
+    <div class="innercontent">
+        <div class="vc_row wpb_row vc_row-fluid">
+            <div class="wpb_column vc_column_container vc_col-sm-2">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper"></div>
+                </div>
+            </div>
+            <div class="wpb_column vc_column_container vc_col-sm-8">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                        <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                            <div class="wpb_column vc_column_container vc_col-sm-10">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                            <div class="wpb_wrapper">
+                                                <h2>Using Configurations in Smoothflow Activities</h2>
+                                                <p>This document explains how to use configuration files on Smoothflow. Please
+                                                    follow the instructions in the proper order to successfully perform the
+                                                    operations.</p>
+
+                                                <p>If you wish to use values which can change overtime you can include them
+                                                    in the configuration section. This will allow you to change values in
+                                                    a file generated when the workflow is running for the first time. You
+                                                    could change the values as you need without having to rebuild the workflow
+                                                    again. For example you can use this for is URLs. Over time the service
+                                                    locations might change. Therefore, it is better to have those values
+                                                    on a config file which can be modified later.</p>
+
+                                                <h4>Using Configuration on the Smoothflow App</h4>
+
+                                                <p>To add configuration:</p>
+                                                <p><b>1.  On the bottom right corner, click</b> <img src="http://www.smoothflow.io/wp-content/uploads/2017/01/con_window_icon.png"
+                                                    /> <b>. The Configurations window opens.</b></p>
+                                                <img src="http://www.smoothflow.io/wp-content/uploads/2017/01/con_window.png" />
+                                                <p></p>
+                                                <p><b>2.  Enter the KEY and VALUE.</b></p>
+                                                <p><b>3.  Select the Category (configuration in this case).</b></p>
+                                                <p><b>4.  Click ADD. The entry will be added and displayed in the list.</b></p>
+                                                <img src="http://www.smoothflow.io/wp-content/uploads/2017/01/add.png" />
+
+                                                </br>
+                                                </br>
+                                                </br>
+                                                </br>
+                                                <h4>Using values on configuration file on your custom activities</h4>
+
+                                                <p>When you have a configuration file, it makes it easier for the developer
+                                                    to update or change constant values after the workflows has been built.
+                                                    Smoothflow development team has created a set of methods which developers
+                                                    can use to access these configuration features.</p>
+
+                                                <p>First of all you need to import the "Common" package to use this feature
+                                                    on your custom activity.</p>
+
+                                                <p><b>Importing the common package</b></br>
+                                                    import "processengine/Common"</p>
+                                                <p>Once imported you could get a specific value by passing the KEY as an argument
+                                                    to the "GetConfigValue" method. It will return you a string value which
+                                                    is the value you are referring to.</p>
+
+                                                <p><b>Get Config Value</b></br>
+                                                    <i>authURL := Common.GetConfigValue("authURL");</i></p>
+
+                                                <p>If you need the entire configurations, use the following method.</p>
+
+                                                <p><b>Get Config</b></br>
+                                                    <i>config := Common.GetConfigValue();</i></p>
+
+                                                <p>If you have any new keys or need to update or save the edited configurations
+                                                    you can use the following method.</p>
+
+                                                <p><b>Saving the config</b></br>
+                                                    <i>Common.SaveConfig(map[string]string);</i></p>
+
+                                                <p>Please make sure you follow the guidelines to use the workflow in an optimal
+                                                    level.</p>
+
+
+                                                <h4>Using configurations when the workflow is built or on client side</h4>
+                                                <p>Once you have successfully downloaded the built workflow, you will get one
+                                                    executable file. When the workflow is running for the first time it will
+                                                    check whether the supporting configuration files are already existing.
+                                                    If not it will generate the actual configuration file with default values
+                                                    in it. The file will be saved in the same directory where the running
+                                                    workflow is currently saved. If the workflow is moved to a different
+                                                    directory the configuration file will again be generated with the default
+                                                    values.</p>
+                                                <img src="http://www.smoothflow.io/wp-content/uploads/2017/01/workflow_optimal.png" />
+
+
+                                                <p>As displayed in the above figure, only the executable will be downloaded
+                                                    from the Smoothflow server. The "Logs", "agent.config" and "settings.config"
+                                                    are generated automatically by the executable. All the configurations
+                                                    you have used when designing the workflow will be available on this configuration
+                                                    file. A sample configuration file will contain the standard JSON structure
+                                                    which is easy to maintain and edit.</p>
+                                                <img src="http://www.smoothflow.io/wp-content/uploads/2017/01/workflow_optimal_json.png" />
+
+                                                <p>All you need to do is to edit the values for the KEYs and replace them with
+                                                    the correct details.</p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                            <div class="wpb_wrapper">
+                                                <h2></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-2">
+                                <div class="vc_column-inner ">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                            <div class="wpb_wrapper">
+                                                <h4>Recent Posts</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                                            <div class="wpb_wrapper">
+                                                <ul class="blog-nav-list">
+                                                    <li class="blog-nav-listitem"><a href="#usingconfig">Using Configurations in Smoothflow Activities</a></li>
+                                                    <li class="blog-nav-listitem"><a href="#getting-started">Getting started with SmoothFlow</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                            <div class="wpb_wrapper">
+                                <h2 id="getting-started"></h2>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                <h2>Getting started with SmoothFlow</h2>
+                                <p>If you have a set of tasks which can be reused, and you need a way to line up those tasks
+                                    and get something done, Smoothflow might just be what you were searching for. It is a
+                                    user friendly and convenient workflow designing tool for everyday use. If you are a developer
+                                    who is familiar with Go Programming Language, then you can write your own units of tasks
+                                    which we call with a fancy name “Activity”.</p>
+
+                                <p>Smoothflow packs a variety of built-in services and also supports the most popular services.
+                                    It has an awesome collection of activities or atomic worker units that can be used to
+                                    save data to your database of choice, Social Media Services, File System Operations,
+                                    Custom Web Requesters, handling SMS and Emails and even IoT compatibility with Raspberry
+                                    Pi and Amazon Alexa. It supports a wide range of databases including Microsoft SQL, MySQL,
+                                    PostgreSQL, MongoDB, Redis, Cassandra, Elasticsearch, Google BigTable and Google CloudDataStore.</p>
+
+                                <p>You can sign up for a free account and get started. If you think Smoothflow suits your requirements,
+                                    then you can upgrade for a premium package as you grow. Premium packages will ensure
+                                    that you can create more number of workflows and add more users to your tenant. You can
+                                    add users of other tenants as well and it depends on the maximum number of users you
+                                    can have.</p>
+
+                                <p>Now let’s get started on creating your first workflow</p>
+                                <p><img src="http://www.smoothflow.io/wp-content/uploads/2017/01/gettings_start_1.png"></p>
+                                <p>First go to SmoothFlow website, if you reading this you already know that. Then click on
+                                    Try Free to create a free account. </p>
+                                <p style="text-align:center"><img src="http://www.smoothflow.io/wp-content/uploads/2017/01/gettings_start_2.png"></p>
+                                <p>Next enter your Name, Email Address, password and a domain name for your company/tenancy.
+                                    If you are an individual user feel free to use anything of your choice.</p>
+                                <p>After the completion you will get a verification Email to the provided Email Address. Click
+                                    the verification link and your account will be verified. Now you can log in to Smoothflow
+                                    with your new account. There you will be asked to choose a package for your tenant. </p>
+                                <p><img src="http://www.smoothflow.io/wp-content/uploads/2017/01/gettings_start_3.png"></p>
+                                <p>Since this is your first step of getting started, you may choose the Free plan. But if you
+                                    feel adventurous you can go big too as you will. After selecting the package, you will
+                                    be displayed with the main dashboard of Smoothflow. If you have an existing Gravatar
+                                    account set up for your provided Email Address, you will have your avatar automatically
+                                    synced. If you need to set a new profile picture, you can change the Gravatar avatar
+                                    and you are all set or you can select a picture from inside the profile settings. If
+                                    you click on your picture in left pane, you will be redirected to profile screen where
+                                    you can define avatar sources and set up billing and security credentials options. These
+                                    will be elaborated in a separate blog post and won’t be focused here since the scope
+                                    of this post is to get you started in Smoothflow as simple as possible.</p>
+                                <p><img src="http://www.smoothflow.io/wp-content/uploads/2017/01/gettings_start_4.png"></p>
+                                <p>The above image shows the dashboard of a Smoothflow account. On the left side you have the
+                                    Menu Pane and we will be explaining that below. On the right side you have recently opened
+                                    workflows, downloaded flows and recently built flows. Built workflows section displays
+                                    the workflows which are downloaded as executables or hosted on Smoothflow. </p>
+                                <p>Let’s explore the right pane first. There you have the access to the features and functions
+                                    of Smoothflow. There are 2 main screens in Smoothflow. One is the draw board and the
+                                    other is Menu Screen. If you click on top left Smoothflow logo you will be switched to
+                                    the draw board and if you click on it again you will come back to this menu screen with
+                                    dashboard. Let’s see what these options are.</p>
+
+                                <p><b>Open</b> - This will open all the saved workflows and their versions. You can make changes
+                                    and save them as different versions of the same workflow.</p>
+                                <p><b>Import & Export</b> - Export allows you to save work flows as files and share them with
+                                    other peers who use Smoothflow. Import function can be used to open those external files
+                                    and import workflow data to your draw board.
+                                </p>
+                                <p><b>Build Executable</b> - This enables to build an executable file for Windows, Linux, Mac
+                                    OS, FreeBSD or Raspberry Pi platforms. After building the executable you can either download
+                                    the exe file or just let Smoothflow to host it in a docker inside the Smoothflow server
+                                    itself. You don’t have to worry about the maintenance of docker servers since Smoothflow
+                                    will automatically manage that.</p>
+                                <p><img src="http://www.smoothflow.io/wp-content/uploads/2017/01/gettings_start_5.png"></p>
+                                <p><b>Published Dockers</b> - In the earlier step if you save the workflow in a docker, then
+                                    you will see the list of docker processors running.</p>
+                                <p><img src="http://www.smoothflow.io/wp-content/uploads/2017/01/gettings_start_6.png"></p>
+                                <p>If you click on one of the workflows, you can view the detailed information about that specific
+                                    workflow instance including the number of incoming and outgoing requests. You can also
+                                    invoke URLs if you require to do so.</p>
+                                <p><img src="http://www.smoothflow.io/wp-content/uploads/2017/01/gettings_start_7.png"></p>
+                                <p><b>Devices</b> - You can register your computer devices or IoT devices like Raspberry Pi
+                                    as a device in Smoothflow and then push your workflows to it so that those workflows
+                                    will be hosted inside the device with a single click. This feature will be discussed
+                                    in detail in a separate blog post.</p>
+                                <p><b>Users</b> - This section contains a list of all the members under your tenant. You can
+                                    also invite other people to join Smoothflow under your tenant.</p>
+                                <p><img src="http://www.smoothflow.io/wp-content/uploads/2017/01/gettings_start_8.png"></p>
+                                <p><b>Settings</b> – Here you can configure your Draw board and themes in Smoothflow. You can
+                                    change colors and accents, zooming and panning. You can also restrict what kind of controls
+                                    should be displayed in the Draw board so it will be less cluttered if you have too many
+                                    activities available. There is too much information to explain in a startup post like
+                                    this. Everything in depth about the listed features will be discussed in the upcoming
+                                    posts.</p>
+                                <p><img src="http://www.smoothflow.io/wp-content/uploads/2017/01/gettings_start_9.png"></p>
+                                <p>Since all important bits are covered, let’s head to draw board where you can actually design
+                                    your workflows. Click on top left Smoothflow icon to begin.</p>
+                                <p><img src="http://www.smoothflow.io/wp-content/uploads/2017/01/gettings_start_10.png"></p>
+                                <p>The above image shows the drawing board. First icon in the toolbar presents you with the
+                                    activity controls to begin with. As a rule, you should always start with a Start node
+                                    and Stop node. In the middle you design the flow control. Under “Flow Controls” you can
+                                    find the Start and Stop nodes. There are lots of nodes to choose from, but let’s try
+                                    to print a message in your first ever work flow. For that drag and drop a “Message” control.
+                                    Then connect the hook points by dragging and connecting with the other nodes. First connect
+                                    Start node and Message node and then connect Message node and Stop node. Click on Message
+                                    control, a properties pane will be displayed on the right side. Finally enter your message
+                                    inside MessageBody section.</p>
+                                <p><img src="http://www.smoothflow.io/wp-content/uploads/2017/01/gettings_start_11.png"></p>
+                                <p>That’s about it. You have successfully drawn your first workflow. Now Click on the Save icon
+                                    in the toolbar. This will bring you another screen requesting workflow details such as
+                                    name, description, version and a comment. Fill them according to your requirement. Now
+                                    you should be able to see the newly created workflow in the Open section in Dashboard.
+                                    In a separate post we will see how to host them, deploy and test them.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wpb_column vc_column_container vc_col-sm-2">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper"></div>
+                </div>
+            </div>
+        </div>
+        <div class="vc_row wpb_row vc_row-fluid">
+            <div class="wpb_column vc_column_container vc_col-sm-12">
+                <div class="vc_column-inner ">
+                    <div class="wpb_wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-include="'include.footer.pre.description.html'"></div>
+</div>

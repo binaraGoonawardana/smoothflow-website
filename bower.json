@@ -1,0 +1,33 @@
+{
+  "name": "smoothflow-website",
+  "homepage": "https://github.com/DuoSoftware/smoothflow-website",
+  "authors": [
+    "shehantissera <shehan@duosoftware.com>"
+  ],
+  "description": "Official Website",
+  "main": "index.html",
+  "keywords": [
+    "Smoothflow",
+    "Workflow",
+    "automation"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-backup": "angular#^1.4.8",
+    "angular-loader": "~1.4.0",
+    "angular-material": "^1.0.8",
+    "angular-mocks": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "html5-boilerplate": "~5.2.0",
+    "jquery": "^2.2.3",
+    "Ionicons": "ionicons#^2.0.1"
+  }
+}
