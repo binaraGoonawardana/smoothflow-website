@@ -7,6 +7,9 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+
+
+
 @charset "UTF-8";
 button,
 img,
@@ -7603,7 +7606,7 @@ div.wpcf7-mail-sent-ok {
 
 .header,
 .plan li {
-	border-bottom: 1px solid #494a5a
+	border-bottom: 1px solid #cecccc
 }
 
 .header {
@@ -7637,13 +7640,13 @@ div.wpcf7-mail-sent-ok {
 }
 
 .plan li {
-	padding: 0;
-	text-align: center;
-	height: 52px;
-	line-height: 52px;
-	font-size: 15px;
-	color: #fff;
-	width: 100%
+    padding: 0;
+    /* text-align: center; */
+    height: 52px;
+    line-height: 52px;
+    font-size: 15px;
+    color: #000;
+    width: 157%;
 }
 
 .plan li:nth-last-child {
@@ -7691,4 +7694,114 @@ div.wpcf7-mail-sent-ok {
 .howitworks {
 	background: url(images/keyfeaturesbg.jpg) no-repeat;
 	background-size: cover
+}
+
+.plans {
+  width: 100%;
+ 
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.plan {
+  float: left;
+  width: 24%;
+  margin: 20px 2px;
+  padding: 15px 25px;
+  text-align: center;
+  background: white;
+  background-clip: padding-box;
+  border: 2px solid #e5ded6;
+  border-color: rgba(black, .1);
+  border-radius: 5px;
+}
+
+.plan-title {
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #36bce6;
+}
+
+.plan-price {
+  margin-bottom: 20px;
+  line-height: 1;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fd935a;
+}
+
+.plan-unit {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #aaa;
+}
+
+.plan-features {
+  width: 120px;
+  margin: 20px auto 15px;
+  padding: 15px 0 0 15px;
+  border-top: 1px solid #e5ded6;
+  text-align: left;
+}
+
+.plan-feature {
+  line-height: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+
+  & + & { margin-top: 5px; }
+}
+
+.plan-feature-unit {
+  margin-left: 2px;
+  font-size: 16px;
+}
+
+.plan-feature-name {
+  font-size: 13px;
+  font-weight: normal;
+  color: #aaa;
+}
+
+.plan-button {
+margin-top: 365px;
+    /* position: relative; */
+    display: block;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(black, .1);
+    background: #54c7b1;
+    border-bottom: 2px solid #2a796a;
+    border-color: rgba(black, .15);
+    border-radius: 4px;;
+
+  &:active {
+    top: 2px;
+    margin-bottom: 2px;
+    border-bottom: 0;
+  }
+}
+
+.plan-highlight {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 170px;
+  border: 4px solid #37bbe6;
+
+  .plan-button {
+    font-size: 18px;
+    line-height: 49px;
+    background: #37bce5;
+    border-color: #3996b3;
+    border-color: rgba(black, .15);
+  }
 }
